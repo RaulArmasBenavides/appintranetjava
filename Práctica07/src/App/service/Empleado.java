@@ -9,6 +9,7 @@ public class Empleado extends Service {
        public static final double SUELDO_COORD = 5000.00 ;//Sueldo coordinador
        public static final double SUELDO_ASIS = 4000.00 ;//Sueldo asistente
        public static final double SUELDO_SECRE = 3000.00 ;//sueldo secretaria
+       public static final double SUELDO_TUTOR = 2000.00;//sueldo tutor
        private String cargo;
 
     public String getCargo() {
@@ -30,6 +31,9 @@ public class Empleado extends Service {
       else
       if(cargo.equalsIgnoreCase("secretaria"))
        Bonif=SUELDO_SECRE*0.7;
+      else
+      if (cargo.equalsIgnoreCase("tutor"))
+       Bonif=SUELDO_TUTOR*0.7;
     }
     
 }
